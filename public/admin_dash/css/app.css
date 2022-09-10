@@ -200,6 +200,9 @@ b,
 strong {
   font-weight: bolder;
 }
+.clPrePhoto{
+  width: 200px;
+}
 .trMargin{
   margin: 10px 0 !important;
 }

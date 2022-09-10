@@ -3,6 +3,7 @@ const colors = require("colors");
 const dotenv = require("dotenv");
 const path = require("path");
 const webRoutes = require("./routes/cometRoutes");
+const webRoutes2 = require("./routes/dashboardRoutes");
 const expressLayout = require("express-ejs-layouts");
 
 //Environtment Init
@@ -25,7 +26,7 @@ app.use(expressLayout);
 app.set("layout", "layouts/app");
 
 //Routes
-app.use("/", webRoutes);
+app.use("/", webRoutes,webRoutes2);
 
 //Listen Server
 app.listen(PORT, () => {

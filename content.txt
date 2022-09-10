@@ -1,0 +1,31 @@
+
+    {
+      "id": 2,
+      "pTitle": "Sky bule Slab Kapor casual huf Shirt for men new style 2022",
+      "pPrice": "370৳",
+      "pThumb": "https://static-01.daraz.com.bd/p/4c4c83c4ee261b7051eb7d87ad917dfe.jpg"
+    },
+    {
+      "id": 3,
+      "pTitle": "Black Textured Formal Shirt For Men",
+      "pPrice": "699৳",
+      "pThumb": "https://static-01.daraz.com.bd/p/5c3b4174d2f62beddd45fe94fbdc0395.jpg"
+    },
+    {
+      "id": 4,
+      "pTitle": "Cotton White Color BTS T-Shirt",
+      "pPrice": "3200৳",
+      "pThumb": "https://static-01.daraz.com.bd/p/6180e2fbcd14b488200b687ea47549d8.png"
+    },
+    {
+      "id": 5,
+      "pTitle": "Sky Blue Fashionable Tops Ladies Short Sleeve Casual Girls Print Cotton New T-Shirt For Women",
+      "pPrice": "370৳",
+      "pThumb": "https://static-01.daraz.com.bd/p/mdc/041695ecc9b18649dfd7054df47ba828.jpg"
+    },
+    {
+      "id": 6,
+      "pTitle": "2 Peace / Set T-Shirt + Pants Katasoft Cotton Children's Children's Children's clothing son Summer to-Peace Suit Setting৳",
+      "pPrice": "370৳",
+      "pThumb": "https://static-01.daraz.com.bd/p/a61a738825505cde4301a8b47a3ea452.jpg"
+    }
