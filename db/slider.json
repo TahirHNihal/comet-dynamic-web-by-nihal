@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Javascript",
+    "des": "Lorem ipsum dolor sit amet, consectetur adip",
+    "photo": "bg2.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Asus Tuf Gaming",
+    "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "photo": "bg3.jpg"
+  }
+]
