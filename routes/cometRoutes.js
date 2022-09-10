@@ -14,7 +14,12 @@ const {
   productsCruds,
   sliderAdd,
   deleteSlider,
-  sliderupdateCruds,sliderEditCruds
+  sliderupdateCruds,
+  sliderEditCruds,
+  testimonialForm,
+  testimonialDelete,
+  testimonialUpdate,
+  testimonialEditCruds,
 } = require("../controllers/cometControllers");
 const multer = require("multer");
 
@@ -45,7 +50,15 @@ router.get("/dashboard", dashboardPage);
 router.post("/slider", cometPhotoMulter, sliderAdd);
 router.get("/slider", sliderCruds);
 router.get("/clients", clientsCruds);
+//Testimonial Routes
 router.get("/testimonial", testimonialCruds);
+//Testimonial Add Routes
+router.post("/testimonial", testimonialForm);
+//Testimonial Delete Routes
+router.get("/testimonial/delete/:id", testimonialDelete);
+//Testimonial Update Routes
+router.get("/testimonial/edit/:id", testimonialEditCruds);
+router.post("/testimonial/update/:id", testimonialUpdate);
 router.get("/blogs", blogsCruds);
 router.get("/products", productsCruds);
 //Slider Delete Route

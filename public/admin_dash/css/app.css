@@ -200,6 +200,12 @@ b,
 strong {
   font-weight: bolder;
 }
+.trMargin{
+  margin: 10px 0 !important;
+}
+td.reviewTD{
+  width: 720px;
+}
 .slPrePhoto img{
   width: 430px;
 }

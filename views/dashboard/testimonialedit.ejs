@@ -326,7 +326,7 @@
         <main class="content">
           <div class="container-fluid p-0">
             <div class="preview my-3">
-              <a class="common-btn" href="/slider">Back</a>
+              <a class="common-btn" href="/testimonial">Back</a>
             </div>
 
             <div class="row my-5">
@@ -336,44 +336,23 @@
               <div class="col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <h2>Update  Slider No. <%= slide.id %> </h2>
+                    <h2>Update Riview No. <%= testimonial.id %> </h2>
 
-                    <form action="/slider/update/<%= slide.id %>" method="POST" enctype="multipart/form-data">
+                    <form action="/testimonial/update/<%= testimonial.id %>" method="POST">
                       <div class="my-3">
-                        <label for="">Title</label>
-                        <input  name="title" class="form-control" type="text"  value="<%= slide.title %>" />
+                        <label for="">Review Text</label>
+                        <input name="rvText" class="form-control" type="text" value="<%= testimonial.review %>" />
                       </div>
                       <div class="my-3">
-                        <label for="">Describtion</label>
-                        <input name="des" class="form-control" type="text"  value="<%= slide.des %>" />
-                      </div>
-                      <div class="my-3">
-                        <label for=""><img src="" alt="" /></label>
-
-                        <br />
-                        <img class="preview_profile mb-2" src="" alt="" />
-                        <br />
-
-                        <div class="preloaded_profile">
-                          <label for="upload_student_photo">
-                            <img class="mb-2" src="/images/slider_images/<%= slide.photo %>" alt="" />
-                          </label>
-                        </div>
-                        <input
-                          name="sliderImage"
-                          class="common-btn"
-                          type="file"
-                          id="upload_student_photo" value="/images/slider_images/<%= slide.photo %> "
-                        />
+                        <label for="">Client Name</label>
+                        <input name="clName" class="form-control" type="text" value="<%= testimonial.clientName %> "/>
                       </div>
                       <div class="my-5">
-                        <input
-                          class="common-btn align-center btn-w-100"
-                          type="submit"
-                          value="Update Now"
-                        />
+                        <input class="common-btn align-center btn-w-100" type="submit" value="Update Now"/>
                       </div>
                     </form>
+
+
                   </div>
                 </div>
               </div>
