@@ -26,7 +26,7 @@ app.use(expressLayout);
 app.set("layout", "layouts/app");
 
 //Routes
-app.use("/", webRoutes,webRoutes2);
+app.use("/", webRoutes, webRoutes2);
 
 //Listen Server
 app.listen(PORT, () => {

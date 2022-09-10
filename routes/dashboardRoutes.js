@@ -83,38 +83,41 @@ const productPhotoMulter = multer({
 //Config multer for all sections end
 
 //Routes
-//Dashboard Routes
+//Dashboard Routers
 router.get("/dashboard", dashboardPage);
+//Slider Routers
 router.post("/slider", sliderPhotoMulter, sliderAdd);
 router.get("/slider", sliderCruds);
-//Client Routes
+//Slider Delete Routers
+router.get("/slider/delete/:id", deleteSlider);
+//Slider Edit & Update Routers
+router.get("/slider/edit/:id", sliderEditCruds);
+router.post("/slider/update/:id", sliderPhotoMulter, sliderupdateCruds);
+//Client Routers
 router.get("/clients", clientsCruds);
 router.post("/clients", clientPhotoMulter, clientsAdd);
+//Client Delete Routers
 router.get("/clients/delete/:id", deleteClients);
-//Testimonial Routes
+//Testimonial Routers
 router.get("/testimonial", testimonialCruds);
 //Testimonial Add Routes
 router.post("/testimonial", testimonialForm);
-//Testimonial Delete Routes
+//Testimonial Delete Routers
 router.get("/testimonial/delete/:id", testimonialDelete);
-//Testimonial Update Routes
+//Testimonial Edit & Update Routers
 router.get("/testimonial/edit/:id", testimonialEditCruds);
 router.post("/testimonial/update/:id", testimonialUpdate);
-//Blog Routes
+//Blog Routers
 router.get("/blogs", blogsCruds);
 router.post("/blogs", blogPhotoMulter, blogsAdd);
-//Blog Delete
+//Blog Delete Routers
 router.get('/blog/delete/:id', blogDelete)
-//Products Routes
+//Products Routers
 router.get("/products", productsCruds);
 router.post("/products",productPhotoMulter, productsAdd);
-//Products Delete
+//Products Delete Routers
 router.get("/products/delete/:id", productsDelete);
-//Slider Delete Route
-router.get("/slider/delete/:id", deleteSlider);
-//Slider Update Route
-router.get("/slider/edit/:id", sliderEditCruds);
-router.post("/slider/update/:id", sliderPhotoMulter, sliderupdateCruds);
+
 
 //Export Modules
 module.exports = router;
