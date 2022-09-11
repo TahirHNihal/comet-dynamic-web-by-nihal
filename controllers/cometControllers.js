@@ -45,7 +45,20 @@ const shopPage = (req, res) => {
 };
 //Single Shop Page
 const shopsinglePage = (req, res) => {
-  res.render("comet/shop-single");
+  //Get All Products Data
+  const products = JSON.parse(
+    readFileSync(path.join(__dirname, "../db/product.json"))
+  );
+  //Get Id
+  const { id } = req.params;
+  //Get single Product by Specific Id
+  const product = products.find((data) => data.id == id);
+  console.log(id);
+  res.render("comet/shop-single", {
+    product,
+    products,
+  });
+  console.log(product);
 };
 //Contact Page
 const contactPage = (req, res) => {

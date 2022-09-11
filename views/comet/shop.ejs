@@ -47,14 +47,14 @@
             <h6 class="upper">Trending Products</h6>
             <ul class="nav product-list">
               
-              <% products.forEach(product => { %>
+              <% products.reverse().forEach(product => { %>
                <li>
                 <div class="product-thumbnail">
                   <img src="/images/product_images/<%= product.photo %>" alt="" />
                 </div>
                 <div class="product-summary">
                   <a href="#"><%= product.pTitle %></a>
-                  <span><%= product.pPrice %>৳</span>
+                  <span><%= product.sPrice %>৳</span>
                 </div>
               </li>
               <% }) %>
@@ -110,8 +110,8 @@
                     </div>
                   </div>
                   <div class="product-info">
-                    <h4 class="upper"><a href="#"><%= product.pTitle %></a></h4>
-                    <span><%= product.pPrice %>৳</span>
+                    <h4 class="upper"><a href="/shop/<%= product.id %>"><%= product.pTitle %></a></h4>
+                    <span><%= product.sPrice %>৳</span>
                     <div class="save-product">
                       <a href="#"><i class="icon-heart"></i></a>
                     </div>

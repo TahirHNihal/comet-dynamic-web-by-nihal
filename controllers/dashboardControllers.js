@@ -4,8 +4,6 @@ const { readFileSync, writeFileSync } = require("fs");
 const { json } = require("express/lib/response");
 const { title } = require("process");
 
-
-
 //Dashboard Page
 const dashboardPage = (req, res) => {
   res.render("dashboard/index");
@@ -341,12 +339,13 @@ const productsAdd = (req, res) => {
   if (products.length > 0) {
     id = products[products.length - 1].id + 1;
   }
-  const { title, price, photo, des } = req.body;
+  const { title, rPrice, sPrice, photo, des } = req.body;
 
   products.push({
     id: id,
     pTitle: title,
-    pPrice: price,
+    rPrice: rPrice,
+    sPrice: sPrice,
     pDes: des,
     photo: req.file ? req.file.filename : "",
   });

@@ -338,7 +338,8 @@
                         <th>#</th>
                         <th>Image</th>
                         <th>Title</th>
-                        <th>Price</th>
+                        <th>Regular Price</th>
+                        <th>Sale Price</th>
                         <th>Description</th>
                         <th colspan="2">Action</th>
                       </tr>
@@ -349,7 +350,8 @@
                           <img src="/images/product_images/<%= product.photo %>" alt="" />
                         </td>
                         <td><%= product.pTitle %> </td>
-                        <td><%= product.pPrice %>৳</td>
+                        <td><%= product.rPrice %>৳</td>
+                        <td><%= product.sPrice %>৳</td>
                         <td><%= product.pDes %></td>
                         <td>
                           <a class="action-btn waring-bg" href="#"
@@ -387,10 +389,19 @@
                         />
                       </div>
                       <div class="my-3">
-                        <label for="">Price</label>
+                        <label for="">Regular Price</label>
                         <input
                           required
-                          name="price"
+                          name="rPrice"
+                          class="form-control"
+                          type="text"
+                        />
+                      </div>
+                      <div class="my-3">
+                        <label for="">Sale Price</label>
+                        <input
+                          required
+                          name="sPrice"
                           class="form-control"
                           type="text"
                         />

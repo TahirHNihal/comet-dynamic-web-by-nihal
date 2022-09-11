@@ -19,7 +19,8 @@ const {
   clientsAdd,
   deleteClients,
   productsAdd,
-  productsDelete,blogDelete
+  productsDelete,
+  blogDelete,
 } = require("../controllers/dashboardControllers");
 const multer = require("multer");
 
@@ -111,10 +112,10 @@ router.post("/testimonial/update/:id", testimonialUpdate);
 router.get("/blogs", blogsCruds);
 router.post("/blogs", blogPhotoMulter, blogsAdd);
 //Blog Delete Routers
-router.get('/blog/delete/:id', blogDelete)
+router.get("/blog/delete/:id", blogDelete);
 //Products Routers
 router.get("/products", productsCruds);
-router.post("/products",productPhotoMulter, productsAdd);
+router.post("/products", productPhotoMulter, productsAdd);
 //Products Delete Routers
 router.get("/products/delete/:id", productsDelete);
 
