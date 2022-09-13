@@ -28,8 +28,33 @@ const multer = require("multer");
 const router = express.Router();
 
 //Config multer for all sections Start
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     if (req.files.sliderImage) {
+//       cb(null, path.join(__dirname, "../public/images/slider_images/"));
+//     }else{console.log('Slider Image Not Found');}
+//     if (req.files.blogImage) {
+//       cb(null, path.join(__dirname, "../public/images/blog_images/"));
+//     }else{console.log('Blog Image Not Found');}
+//   },
+// });
+// const allPhotoMulter = multer({
+//   storage,
+// }).fields([
+//   {
+//     name: "sliderImage",
+//     maxCount: 1,
+//   },
+//   {
+//     name: "blogImage",
+//     maxCount: 1,
+//   },
+// ]);
+
 
 //Config Multer for Silder
+
+
 const storage1 = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../public/images/slider_images"));
@@ -56,6 +81,7 @@ const blogPhotoMulter = multer({
 }).single("blogImage");
 
 //Config Multer for Client
+
 const storage3 = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../public/images/client_images/"));
@@ -118,7 +144,6 @@ router.get("/products", productsCruds);
 router.post("/products", productPhotoMulter, productsAdd);
 //Products Delete Routers
 router.get("/products/delete/:id", productsDelete);
-
 
 //Export Modules
 module.exports = router;

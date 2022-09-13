@@ -9,6 +9,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -340,12 +341,16 @@
       <!-- end of container-->
     </footer>
     <!-- end of footer-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/bundle.js"></script>
     <script
       type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?v=3.exp"
     ></script>
+    
     <script type="text/javascript" src="/js/main.js"></script>
 
     <script>
@@ -381,6 +386,11 @@
           };
         });
       }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#productsDataTable").DataTable();
+      });
     </script>
   </body>
 
